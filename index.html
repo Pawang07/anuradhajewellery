@@ -5,49 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Anuradha Jewelry - Exquisite craftsmanship, timeless beauty.">
     <title>Anuradha Jewelry</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Make sure this path is correct -->
-    <link rel="stylesheet" href="hero.css"> <!-- Make sure this path is correct -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hero.css">
+    <style>
+        /* Responsive Design */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background: #c89c6c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer-content {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            .hero-text h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
 
-   <!-- Header Section -->
 <header>
     <div class="logo">
         <h1>Anuradha Jewelry</h1>
-        <p>Exquisite Craftsmanship, Timeless Beauty</p>
-        
     </div>
-    
-         <nav>
+    <nav>
         <ul>
-            <li><a href="index.html">Home</a></li> <!-- Correct link to Home page -->
-            <li><a href="collection.html">Collections</a></li> <!-- Correct link to Collections page -->
-            <li><a href="services.html">Services</a></li> <!-- Correct link to Services page -->
-            <li><a href="blog.html">Blog</a></li> <!-- Correct link to Blog page -->
-            <li><a href="contact.html">Contact Us</a></li> <!-- Correct link to Contact page -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collections</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-   
-   
 </header>
 
-
-   <!-- Hero Section with Multiple Images -->
 <section class="hero">
-    <div class="hero-slider">
-        <div class="hero-slide">
-            <img src="./images/1.jpg" alt="Gold Necklace">
-        </div>
-        <div class="hero-slide">
-            <img src="./images/rings1.jpg" alt="Diamond Ring">
-        </div>
-        <div class="hero-slide">
-            <img src="./images/ring-2154708_1920.jpg" alt="Silver Earring">
-        </div>
-        <div class="hero-slide">
-            <img src="./images/frnt.jpg" alt="Silver Earring">
-        </div>
-    </div>
+    <img src="./images/frnt.jpg" alt="Jewelry Showcase">
     <div class="hero-text">
         <h2>Explore Our Timeless Jewelry Collection</h2>
         <p>Elegance, crafted to perfection</p>
@@ -55,49 +134,40 @@
     </div>
 </section>
 
-
-    <!-- Featured Products Section -->
-    <section class="featured-products">
-        <h2>Featured Collections</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="./images/pr1.jpg" alt="Product 1">
-                <h3>Gold Necklace</h3>
-                <p>$500</p>
-                <a href="./services.html" class="btn">View Details</a>
-            </div>
-            <div class="product">
-                <img src="./images/pr2.jpg" alt="Product 2">
-                <h3>Diamond Ring</h3>
-                <p>$1200</p>
-                <a href="./services.html" class="btn">View Details</a>
-            </div>
-            <div class="product">
-                <img src="./images/silver3.jpg" alt="Product 3">
-                <h3>Silver Earrings</h3>
-                <p>$200</p>
-                <a href="./services.html" class="btn">View Details</a>
-            </div>
+<section class="featured-products">
+    <h2>Featured Collections</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="./images/pr1.jpg" alt="Gold Necklace">
+            <h3>Gold Necklace</h3>
+            <p>$500</p>
+            <a href="gold-necklace.html" class="btn">View Details</a>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Anuradha Jewelry. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">Pinterest</a>
-            </div>
-            <div class="footer-links">
-                <a href="about-us.html">About Us</a> | 
-                <a href="privacy-policy.html">Privacy Policy</a> | 
-                <a href="disclaimer.html">Disclaimer</a>
-            </div>
+        <div class="product">
+            <img src="./images/pr2.jpg" alt="Diamond Ring">
+            <h3>Diamond Ring</h3>
+            <p>$1200</p>
+            <a href="diamond-ring.html" class="btn">View Details</a>
         </div>
-    </footer>
-    
+        <div class="product">
+            <img src="./images/silver3.jpg" alt="Silver Earrings">
+            <h3>Silver Earrings</h3>
+            <p>$200</p>
+            <a href="silver-earring.html" class="btn">View Details</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Anuradha Jewelry. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="about-us.html">About Us</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
